@@ -72,7 +72,6 @@ class Blockchain:
             proof = block['proof']
 
             # con los valores anteriores creamos un hash
-            # sigo sin entender por qué proof y previous block al cuadrado.
             hash_operation = hashlib.sha256(str(proof**2-previous_block**2).encode()).hexdigest()
 
             # si los primeros 4 digitos del hash anterior son distintos al proof de 4 ceros return false.
